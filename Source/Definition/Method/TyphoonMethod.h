@@ -32,12 +32,14 @@
 * Its generally recommended to use initializer-style injection, unless the above drawbacks will manifest.
 *
 */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-interface-ivars"
 @interface TyphoonMethod : NSObject <NSCopying>
 {
     NSMutableArray *_injectedParameters;
     SEL _selector;
 }
-
+#pragma clang diagnostic pop
 /**
 * The selector used to initialize the component.
 */

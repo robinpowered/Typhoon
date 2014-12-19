@@ -58,7 +58,9 @@ typedef NS_OPTIONS(NSInteger, TyphoonAutoInjectVisibility)
     TyphoonAutoInjectVisibilityByClass = 1 << 0,
     TyphoonAutoInjectVisibilityByProtocol = 1 << 1,
 };
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-interface-ivars"
+#pragma clang diagnostic ignored "-Wassign-enum"
 const static TyphoonAutoInjectVisibility TyphoonAutoInjectVisibilityDefault = TyphoonAutoInjectVisibilityByClass | TyphoonAutoInjectVisibilityByProtocol;
 
 typedef void(^TyphoonDefinitionBlock)(TyphoonDefinition *definition);
@@ -80,7 +82,7 @@ typedef void(^TyphoonDefinitionBlock)(TyphoonDefinition *definition);
     TyphoonScope _scope;
     TyphoonDefinition *_parent;
 }
-
+#pragma clang diagnostic pop
 @property(nonatomic, readonly) Class type;
 
 /**
