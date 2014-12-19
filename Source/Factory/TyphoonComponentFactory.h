@@ -27,6 +27,8 @@
 * API for assembling components from their constituent parts. This low-level API could be used as-is, however its intended to use a higher
 * level abstraction such as TyphoonBlockComponentFactory.
 */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-interface-ivars"
 @interface TyphoonComponentFactory : NSObject
 {
     NSMutableArray *_registry;
@@ -39,7 +41,7 @@
     NSMutableArray *_componentPostProcessors;
     BOOL _isLoading;
 }
-
+#pragma clang diagnostic pop
 /**
 * The instantiated singletons.
 */
