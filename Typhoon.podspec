@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.summary = 'A dependency injection container for Objective-C and Swift. Light-weight, yet flexible and full-featured.'
   spec.homepage = 'http://www.typhoonframework.org'
   spec.author = {'Jasper Blues, Robert Gilliam, Daniel Rodríguez, Erik Sundin, Aleksey Garbarev & Contributors' => 'info@typhoonframework.org'}
-  spec.source = {:git => 'https://github.com/typhoon-framework/Typhoon.git', :tag => spec.version.to_s, :submodules => true}
+  spec.source = {:git => 'https://github.com/robinpowered/Typhoon.git', :branch => 'inhibit_warnings', :submodules => true}
 
   spec.ios.deployment_target = '5.0'
   spec.osx.deployment_target = '10.7'
